@@ -10,7 +10,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-<table class="table table-dark mt-3">
+<div class = "container m3">
+<h1 class = "text-center"> Books </h1>
+<table class="table table-dark">
     <thead>
         <tr>
             <th scope="col">ID</th>
@@ -23,12 +25,11 @@
     <tbody>
         <c:forEach items="${allBooks}" var ="book">
         <tr>
-            <td>${book.id}</td>
-            <td><c:out value="${book.title}"/></td>
-            <td><c:out value="${book.description}"/></td>
-            <td><c:out value="${book.language}"/></td>
-            <td>${book.numberOfPages}</td>
-            <td>${ninja.age}</td>
+            <td><a href="/books/${book.id}">${book.id}</a></td>
+            <td><a href="/books/${book.id}"><c:out value="${book.title}"/></a></td>
+            <td><a href="/books/${book.id}"><c:out value="${book.description}"/></a></td>
+            <td><a href="/books/${book.id}"><c:out value="${book.language}"/></a></td>
+            <td><a href="/books/${book.id}">${book.numberOfPages}</a></td>
         </tr>
         </c:forEach>
     </tbody>
@@ -36,5 +37,6 @@
 	<script type="text/javascript" src="/js/app.js"></script>
 	<script src="/webjars/jquery/jquery.min.js"></script>
 	<script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+</div>
 </body>
 </html>

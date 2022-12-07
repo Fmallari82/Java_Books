@@ -14,6 +14,8 @@
 	<h3>Description: <c:out value="${oneBook.description}"/></h3>            
     <h3>Language: <c:out value="${oneBook.language}"/></h3>
     <h3>Number of pages: <c:out value="${oneBook.numberOfPages}"/></h3>
+    
+    <button><a href="/books/all">Home</a></button>
 	
 	
 	<script type="text/javascript" src="/js/app.js"></script>
